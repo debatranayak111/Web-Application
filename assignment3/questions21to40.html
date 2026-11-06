@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Lab Programs 21–40</title>
+<style>
+
+  body{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+    line-height: 1.5;
+    color: #222;
+  }
+  h1{ font-size: 22px; }
+  section{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  h2{ font-size: 16px; margin-top: 0; }
+  p.desc{ color: #555; font-size: 14px; margin-top: -6px; }
+  label{ font-size: 13px; display: block; margin-bottom: 4px; }
+  input, select{
+    padding: 6px 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  button{
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .output{
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    font-family: monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    margin-top: 8px;
+  }
+  #dom-target{ font-size: 16px; }
+  #counter-val{ font-size: 28px; font-weight: bold; }
+
+#mouseBox33, #box37 {
+  width: 100%;
+  max-width: 500px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #555;
+  border-radius: 10px;
+  margin: 12px 0;
+  background: #f5f5f5;
+}
+
+</style>
+</head>
+<body>
+<h1>JavaScript Lab Programs (21–40)</h1>
+
+<section><h2>21. Email Validation</h2><label>Email</label><input id="email21" type="text" value="student@gmail.com"><br><button onclick="runEmail21()">Validate</button><div class="output" id="out-21"></div></section>
+<section><h2>22. 10-Digit Mobile Number Validation</h2><label>Mobile Number</label><input id="mobile22" type="text" value="9876543210"><br><button onclick="runMobile22()">Validate</button><div class="output" id="out-22"></div></section>
+<section><h2>23. Password Validation</h2><p class="desc">Minimum 8 characters, one uppercase, one lowercase, and one digit.</p><label>Password</label><input id="password23" type="password" value="Hello123"><br><button onclick="runPassword23()">Validate</button><div class="output" id="out-23"></div></section>
+<section><h2>24. Alphabets Only</h2><label>String</label><input id="text24" type="text" value="Debatra"><br><button onclick="runAlphabet24()">Validate</button><div class="output" id="out-24"></div></section>
+<section><h2>25. Numbers Only</h2><label>String</label><input id="text25" type="text" value="123456"><br><button onclick="runNumber25()">Validate</button><div class="output" id="out-25"></div></section>
+<section><h2>26. Registration Form Validation</h2><label>Name</label><input id="name26" value="Debatra Nayak"><label>Email</label><input id="email26" value="debatra@gmail.com"><label>Mobile Number</label><input id="mobile26" value="9876543210"><label>Password</label><input id="password26" type="password" value="Hello123"><br><button onclick="runRegistration26()">Register</button><div class="output" id="out-26"></div></section>
+<section><h2>27. Strong Password Validation</h2><p class="desc">Minimum 8 characters, uppercase, lowercase, digit, and special character.</p><label>Password</label><input id="password27" type="password" value="Hello@123"><br><button onclick="runStrongPassword27()">Validate</button><div class="output" id="out-27"></div></section>
+<section><h2>28. Username Validation</h2><p class="desc">5–15 characters; alphabets, digits, and underscore only.</p><label>Username</label><input id="username28" value="Debatra_21"><br><button onclick="runUsername28()">Validate</button><div class="output" id="out-28"></div></section>
+<section><h2>29. Name, Email, Mobile and PIN Validation</h2><label>Name</label><input id="name29" value="Debatra Nayak"><label>Email</label><input id="email29" value="debatra@gmail.com"><label>Mobile Number</label><input id="mobile29" value="9876543210"><label>PIN Code</label><input id="pin29" value="530001"><br><button onclick="runForm29()">Validate</button><div class="output" id="out-29"></div></section>
+<section><h2>30. Email, Mobile and Password Validation</h2><label>Email</label><input id="email30" value="student@gmail.com"><label>Mobile Number</label><input id="mobile30" value="9876543210"><label>Password</label><input id="password30" type="password" value="Hello123"><br><button onclick="runForm30()">Validate</button><div class="output" id="out-30"></div></section>
+<section>
+  <h2>31. Alert Message using onclick</h2>
+  <p class="desc">Displays an alert message when the button is clicked.</p>
+  <button onclick="run31()">Click Me</button>
+</section>
+<section>
+  <h2>32. Background Color using mouseover</h2>
+  <p class="desc">Changes the webpage background color when the mouse moves over the button.</p>
+  <button onmouseover="run32()">Move Mouse Over Me</button>
+</section>
+<section>
+  <h2>33. Mouse Coordinates using mousemove</h2>
+  <p class="desc">Displays the mouse pointer coordinates while moving over the box.</p>
+  <div id="mouseBox33" onmousemove="run33(event)">
+    Move your mouse inside this box
+  </div>
+  <div class="output" id="out-33">X: 0, Y: 0</div>
+</section>
+<section>
+  <h2>34. Change Paragraph Text</h2>
+  <p class="desc">Changes the text of a paragraph when a button is clicked.</p>
+  <p id="para34">This is the original paragraph text.</p>
+  <button onclick="run34()">Change Text</button>
+</section>
+<section>
+  <h2>35. Keydown Event</h2>
+  <p class="desc">Displays a message when the user presses a key in the text box.</p>
+  <input type="text" id="input35" onkeydown="run35(event)" placeholder="Press any key">
+  <div class="output" id="out-35">Press a key...</div>
+</section>
+<section>
+  <h2>36. Counter using Event Handling</h2>
+  <p class="desc">Use Increment and Decrement buttons to update the counter.</p>
+  <div id="counter36" style="font-size:30px; margin:15px 0;">0</div>
+  <button onclick="run36Increment()">Increment</button>
+  <button onclick="run36Decrement()">Decrement</button>
+</section>
+<section>
+  <h2>37. Background Color using mouseenter and mouseleave</h2>
+  <p class="desc">The background changes when the mouse enters the box and returns when it leaves.</p>
+  <div id="box37" onmouseenter="run37Enter()" onmouseleave="run37Leave()">
+    Move the mouse into and out of this box
+  </div>
+</section>
+<section>
+  <h2>38. Form Submit Event</h2>
+  <p class="desc">Prevents form submission and displays the entered Name and Email.</p>
+  <form onsubmit="run38(event)">
+    <label>Name</label>
+    <input type="text" id="name38" required>
+    <label>Email</label>
+    <input type="email" id="email38" required>
+    <button type="submit">Submit</button>
+  </form>
+  <div class="output" id="out-38"></div>
+</section>
+<section>
+  <h2>39. Simple Image Gallery</h2>
+  <p class="desc">Use Next and Previous buttons to change the displayed image.</p>
+  <img id="gallery39" src="https://picsum.photos/id/1015/500/280" alt="Gallery Image" style="max-width:100%; height:280px; object-fit:cover; border-radius:10px;">
+  <br><br>
+  <button onclick="run39Previous()">Previous</button>
+  <button onclick="run39Next()">Next</button>
+  <div class="output" id="out-39">Image 1 of 4</div>
+</section>
+<section>
+  <h2>40. Character Counter using Keyboard Events</h2>
+  <p class="desc">Counts and displays the number of characters entered in the text box.</p>
+  <textarea id="text40" onkeyup="run40()" rows="4" placeholder="Type something..."></textarea>
+  <div class="output" id="out-40">Characters: 0</div>
+</section>
+
+<script>
+function setOutput(id, text) {
+  document.getElementById(id).textContent = text;
+}
+
+function runEmail21(){const v=document.getElementById("email21").value;setOutput("out-21",/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?"Valid Email Address":"Invalid Email Address");}
+function runMobile22(){const v=document.getElementById("mobile22").value;setOutput("out-22",/^[6-9][0-9]{9}$/.test(v)?"Valid Mobile Number":"Invalid Mobile Number");}
+function runPassword23(){const v=document.getElementById("password23").value;setOutput("out-23",/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/.test(v)?"Valid Password":"Invalid Password");}
+function runAlphabet24(){const v=document.getElementById("text24").value;setOutput("out-24",/^[A-Za-z]+$/.test(v)?"String contains only alphabets":"String contains characters other than alphabets");}
+function runNumber25(){const v=document.getElementById("text25").value;setOutput("out-25",/^[0-9]+$/.test(v)?"String contains only numbers":"String contains characters other than numbers");}
+function runRegistration26(){const n=document.getElementById("name26").value,e=document.getElementById("email26").value,m=document.getElementById("mobile26").value,p=document.getElementById("password26").value;if(!/^[A-Za-z ]+$/.test(n))setOutput("out-26","Invalid Name");else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))setOutput("out-26","Invalid Email");else if(!/^[6-9][0-9]{9}$/.test(m))setOutput("out-26","Invalid Mobile Number");else if(!/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/.test(p))setOutput("out-26","Invalid Password");else setOutput("out-26","Registration Successful!");}
+function runStrongPassword27(){const v=document.getElementById("password27").value;setOutput("out-27",/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}$/.test(v)?"Strong Password":"Weak Password");}
+function runUsername28(){const v=document.getElementById("username28").value;setOutput("out-28",/^[A-Za-z0-9_]{5,15}$/.test(v)?"Valid Username":"Invalid Username");}
+function runForm29(){const n=document.getElementById("name29").value,e=document.getElementById("email29").value,m=document.getElementById("mobile29").value,p=document.getElementById("pin29").value;if(!/^[A-Za-z ]+$/.test(n))setOutput("out-29","Invalid Name");else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e))setOutput("out-29","Invalid Email");else if(!/^[6-9][0-9]{9}$/.test(m))setOutput("out-29","Invalid Mobile Number");else if(!/^[0-9]{6}$/.test(p))setOutput("out-29","Invalid PIN Code");else setOutput("out-29","All details are valid!");}
+function runForm30(){const e=document.getElementById("email30").value,m=document.getElementById("mobile30").value,p=document.getElementById("password30").value;let x=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)?"Valid Email":"Invalid Email";x+="\n"+(/^[6-9][0-9]{9}$/.test(m)?"Valid Mobile Number":"Invalid Mobile Number");x+="\n"+(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/.test(p)?"Valid Password":"Invalid Password");setOutput("out-30",x);}
+
+
+function run31(){
+  alert("Hello! This alert is displayed using the onclick event.");
+}
+
+function run32(){
+  document.body.style.backgroundColor = "lightblue";
+}
+
+function run33(event){
+  const box = document.getElementById("mouseBox33");
+  const rect = box.getBoundingClientRect();
+  const x = Math.round(event.clientX - rect.left);
+  const y = Math.round(event.clientY - rect.top);
+  setOutput("out-33", "X: " + x + ", Y: " + y);
+}
+
+function run34(){
+  document.getElementById("para34").innerHTML = "The paragraph text has been changed using JavaScript event handling!";
+}
+
+function run35(event){
+  setOutput("out-35", "You pressed: " + event.key);
+}
+
+let counter36 = 0;
+function run36Increment(){
+  counter36++;
+  document.getElementById("counter36").innerHTML = counter36;
+}
+function run36Decrement(){
+  counter36--;
+  document.getElementById("counter36").innerHTML = counter36;
+}
+
+function run37Enter(){
+  document.body.style.backgroundColor = "lightgreen";
+}
+function run37Leave(){
+  document.body.style.backgroundColor = "";
+}
+
+function run38(event){
+  event.preventDefault();
+  const name = document.getElementById("name38").value;
+  const email = document.getElementById("email38").value;
+  setOutput("out-38", "Name: " + name + " | Email: " + email);
+}
+
+const galleryImages39 = [
+  "https://picsum.photos/id/1015/500/280",
+  "https://picsum.photos/id/1016/500/280",
+  "https://picsum.photos/id/1025/500/280",
+  "https://picsum.photos/id/1035/500/280"
+];
+let galleryIndex39 = 0;
+
+function showGallery39(){
+  document.getElementById("gallery39").src = galleryImages39[galleryIndex39];
+  setOutput("out-39", "Image " + (galleryIndex39 + 1) + " of " + galleryImages39.length);
+}
+function run39Next(){
+  galleryIndex39 = (galleryIndex39 + 1) % galleryImages39.length;
+  showGallery39();
+}
+function run39Previous(){
+  galleryIndex39 = (galleryIndex39 - 1 + galleryImages39.length) % galleryImages39.length;
+  showGallery39();
+}
+
+function run40(){
+  const text = document.getElementById("text40").value;
+  setOutput("out-40", "Characters: " + text.length);
+}
+
+
+</script>
+</body>
+</html>

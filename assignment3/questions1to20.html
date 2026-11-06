@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Lab Programs</title>
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+    line-height: 1.5;
+    color: #222;
+  }
+  h1{ font-size: 22px; }
+  section{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+  h2{ font-size: 16px; margin-top: 0; }
+  p.desc{ color: #555; font-size: 14px; margin-top: -6px; }
+  label{ font-size: 13px; display: block; margin-bottom: 4px; }
+  input, select{
+    padding: 6px 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  button{
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .output{
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    font-family: monospace;
+    font-size: 13.5px;
+    white-space: pre-wrap;
+    margin-top: 8px;
+  }
+  #dom-target{ font-size: 16px; }
+  #counter-val{ font-size: 28px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>JavaScript Lab Programs (1–20)</h1>
+
+<section>
+  <h2>1. Data Types Demo</h2>
+  <p class="desc">Declares variables of different data types and displays their values.</p>
+  <button onclick="runDataTypes()">Run</button>
+  <div class="output" id="out-1"></div>
+</section>
+
+<section>
+  <h2>2. Arithmetic Operations</h2>
+  <p class="desc">Addition, subtraction, multiplication, division, modulus of two numbers.</p>
+  <label>Number A</label>
+  <input id="a2" type="number" value="18">
+  <label>Number B</label>
+  <input id="b2" type="number" value="4">
+  <br>
+  <button onclick="runArithmetic()">Calculate</button>
+  <div class="output" id="out-2"></div>
+</section>
+
+<section>
+  <h2>3. Rectangle Area & Perimeter</h2>
+  <p class="desc">Calculates area and perimeter of a rectangle.</p>
+  <label>Length</label>
+  <input id="len3" type="number" value="12">
+  <label>Width</label>
+  <input id="wid3" type="number" value="5">
+  <br>
+  <button onclick="runRectangle()">Calculate</button>
+  <div class="output" id="out-3"></div>
+</section>
+
+<section>
+  <h2>4. Celsius ⇄ Fahrenheit</h2>
+  <p class="desc">Converts temperature between Celsius and Fahrenheit.</p>
+  <label>Celsius</label>
+  <input id="c4" type="number" value="37">
+  <button onclick="runCtoF()">Convert to °F</button>
+  <div class="output" id="out-4a"></div>
+  <label>Fahrenheit</label>
+  <input id="f4" type="number" value="98.6">
+  <button onclick="runFtoC()">Convert to °C</button>
+  <div class="output" id="out-4b"></div>
+</section>
+
+<section>
+  <h2>5. Even or Odd</h2>
+  <p class="desc">Determines whether a number is even or odd.</p>
+  <label>Number</label>
+  <input id="n5" type="number" value="17">
+  <br>
+  <button onclick="runEvenOdd()">Check</button>
+  <div class="output" id="out-5"></div>
+</section>
+
+<section>
+  <h2>6. Largest of Three Numbers</h2>
+  <p class="desc">Finds the largest of three numbers using if-else.</p>
+  <label>A</label><input id="a6" type="number" value="42">
+  <label>B</label><input id="b6" type="number" value="17">
+  <label>C</label><input id="c6" type="number" value="99">
+  <br>
+  <button onclick="runLargest()">Find Largest</button>
+  <div class="output" id="out-6"></div>
+</section>
+
+<section>
+  <h2>7. Factorial</h2>
+  <p class="desc">Calculates the factorial of a number using a loop.</p>
+  <label>Number</label>
+  <input id="n7" type="number" value="6">
+  <br>
+  <button onclick="runFactorial()">Calculate</button>
+  <div class="output" id="out-7"></div>
+</section>
+
+<section>
+  <h2>8. Multiplication Table</h2>
+  <p class="desc">Generates the multiplication table of a number (1–10) using a for loop.</p>
+  <label>Number</label>
+  <input id="n8" type="number" value="7">
+  <br>
+  <button onclick="runTable()">Generate</button>
+  <div class="output" id="out-8"></div>
+</section>
+
+<section>
+  <h2>9. Sum of First N Natural Numbers</h2>
+  <p class="desc">Calculates the sum of the first N natural numbers using a loop.</p>
+  <label>N</label>
+  <input id="n9" type="number" value="50">
+  <br>
+  <button onclick="runSumN()">Calculate</button>
+  <div class="output" id="out-9"></div>
+</section>
+
+<section>
+  <h2>10. Prime Number Check</h2>
+  <p class="desc">Checks whether a number is prime using loops and conditionals.</p>
+  <label>Number</label>
+  <input id="n10" type="number" value="97">
+  <br>
+  <button onclick="runPrime()">Check</button>
+  <div class="output" id="out-10"></div>
+</section>
+
+<section>
+  <h2>11. Count Digits</h2>
+  <p class="desc">Counts the number of digits in an integer using a while loop.</p>
+  <label>Number</label>
+  <input id="n11" type="number" value="502491">
+  <br>
+  <button onclick="runCountDigits()">Count</button>
+  <div class="output" id="out-11"></div>
+</section>
+
+<section>
+  <h2>12. Reverse a Number</h2>
+  <p class="desc">Reverses the digits of a number using a loop.</p>
+  <label>Number</label>
+  <input id="n12" type="number" value="12345">
+  <br>
+  <button onclick="runReverse()">Reverse</button>
+  <div class="output" id="out-12"></div>
+</section>
+
+<section>
+  <h2>13. Simple Calculator (switch)</h2>
+  <p class="desc">Calculator for +, -, *, /, % using a switch statement.</p>
+  <label>A</label>
+  <input id="a13" type="number" value="20">
+  <label>Operator</label>
+  <select id="op13">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <label>B</label>
+  <input id="b13" type="number" value="6">
+  <br>
+  <button onclick="runSwitchCalc()">Compute</button>
+  <div class="output" id="out-13"></div>
+</section>
+
+<section>
+  <h2>14. Student Grade Calculator</h2>
+  <p class="desc">Calculates total, average, percentage, and grade from marks in 5 subjects.</p>
+  <label>Subject 1</label><input id="s1" type="number" value="88">
+  <label>Subject 2</label><input id="s2" type="number" value="76">
+  <label>Subject 3</label><input id="s3" type="number" value="91">
+  <label>Subject 4</label><input id="s4" type="number" value="65">
+  <label>Subject 5</label><input id="s5" type="number" value="80">
+  <br>
+  <button onclick="runGrade()">Calculate</button>
+  <div class="output" id="out-14"></div>
+</section>
+
+<section>
+  <h2>15. Dynamic Text Change</h2>
+  <p class="desc">Changes the text of an HTML element dynamically using the DOM.</p>
+  <p id="dom-target">This is the original text.</p>
+  <label>New text</label>
+  <input id="text15" type="text" value="Text updated via the DOM!" style="width:280px;">
+  <br>
+  <button onclick="runChangeText()">Update Text</button>
+</section>
+
+<section>
+  <h2>16. Background Color Switcher</h2>
+  <p class="desc">Changes the page background color when a button is clicked.</p>
+  <button onclick="setBg('#ffffff')">White</button>
+  <button onclick="setBg('#e8f5e9')">Green</button>
+  <button onclick="setBg('#ede7f6')">Purple</button>
+  <button onclick="setBg('#fff3e0')">Orange</button>
+  <button onclick="setBg('#000000')">Dark</button>
+</section>
+
+<section>
+  <h2>17. Form Input Display</h2>
+  <p class="desc">Accepts input through form fields and displays it dynamically using the DOM.</p>
+  <label>Name</label><input id="name17" type="text" value="Genesis">
+  <label>Age</label><input id="age17" type="number" value="19">
+  <label>City</label><input id="city17" type="text" value="Visakhapatnam">
+  <br>
+  <button onclick="runFormDisplay()">Submit</button>
+  <div class="output" id="out-17"></div>
+</section>
+
+<section>
+  <h2>18. Counter (Increment / Decrement / Reset)</h2>
+  <p class="desc">A counter with Increment, Decrement, and Reset buttons using the DOM.</p>
+  <p id="counter-val">0</p>
+  <button onclick="counterChange(1)">Increment</button>
+  <button onclick="counterChange(-1)">Decrement</button>
+  <button onclick="counterReset()">Reset</button>
+</section>
+
+<section>
+  <h2>19. Even & Odd Numbers in a Range</h2>
+  <p class="desc">Displays all even and odd numbers within a specified range.</p>
+  <label>Start</label><input id="start19" type="number" value="1">
+  <label>End</label><input id="end19" type="number" value="20">
+  <br>
+  <button onclick="runRange()">Show Numbers</button>
+  <div class="output" id="out-19"></div>
+</section>
+
+<section>
+  <h2>20. Mini Web Calculator</h2>
+  <p class="desc">A complete mini calculator using functions, events, and the DOM.</p>
+  <label>A</label>
+  <input id="a20" type="number" value="15">
+  <label>Operator</label>
+  <select id="op20">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <label>B</label>
+  <input id="b20" type="number" value="4">
+  <br>
+  <button onclick="runMiniCalc()">=</button>
+  <div class="output" id="out-20"></div>
+</section>
+
+<script>
+function setOutput(id, text) {
+  document.getElementById(id).textContent = text;
+}
+
+function runDataTypes() {
+  let str = "Genesis";
+  let num = 21;
+  let float = 3.14;
+  let bool = true;
+  let arr = [1, 2, 3];
+  let obj = { course: "CSE", year: 2 };
+  let empty = null;
+  let notSet;
+
+  const rows = [
+    ["String", str, typeof str],
+    ["Number", num, typeof num],
+    ["Float", float, typeof float],
+    ["Boolean", bool, typeof bool],
+    ["Array", JSON.stringify(arr), typeof arr],
+    ["Object", JSON.stringify(obj), typeof obj],
+    ["Null", empty, typeof empty],
+    ["Undefined", notSet, typeof notSet],
+  ];
+  const text = rows.map(r => `${r[0]} = ${r[1]}  (${r[2]})`).join("\n");
+  setOutput("out-1", text);
+}
+
+function runArithmetic() {
+  const a = Number(document.getElementById("a2").value);
+  const b = Number(document.getElementById("b2").value);
+  const add = a + b;
+  const sub = a - b;
+  const mul = a * b;
+  const div = b !== 0 ? a / b : "undefined (division by zero)";
+  const mod = b !== 0 ? a % b : "undefined (division by zero)";
+  setOutput("out-2", `Addition: ${add}\nSubtraction: ${sub}\nMultiplication: ${mul}\nDivision: ${div}\nModulus: ${mod}`);
+}
+
+function runRectangle() {
+  const length = Number(document.getElementById("len3").value);
+  const width = Number(document.getElementById("wid3").value);
+  const area = length * width;
+  const perimeter = 2 * (length + width);
+  setOutput("out-3", `Area: ${area}\nPerimeter: ${perimeter}`);
+}
+
+function runCtoF() {
+  const c = Number(document.getElementById("c4").value);
+  const f = (c * 9 / 5) + 32;
+  setOutput("out-4a", `${c}°C = ${f.toFixed(2)}°F`);
+}
+
+function runFtoC() {
+  const f = Number(document.getElementById("f4").value);
+  const c = (f - 32) * 5 / 9;
+  setOutput("out-4b", `${f}°F = ${c.toFixed(2)}°C`);
+}
+
+function runEvenOdd() {
+  const n = Number(document.getElementById("n5").value);
+  const result = n % 2 === 0 ? "Even" : "Odd";
+  setOutput("out-5", `${n} is ${result}`);
+}
+
+function runLargest() {
+  const a = Number(document.getElementById("a6").value);
+  const b = Number(document.getElementById("b6").value);
+  const c = Number(document.getElementById("c6").value);
+  let largest;
+  if (a >= b && a >= c) largest = a;
+  else if (b >= a && b >= c) largest = b;
+  else largest = c;
+  setOutput("out-6", `Largest of ${a}, ${b}, ${c} is ${largest}`);
+}
+
+function runFactorial() {
+  const n = Number(document.getElementById("n7").value);
+  if (n < 0) { setOutput("out-7", "Factorial is not defined for negative numbers"); return; }
+  let result = 1;
+  for (let i = 2; i <= n; i++) result *= i;
+  setOutput("out-7", `${n}! = ${result}`);
+}
+
+function runTable() {
+  const n = Number(document.getElementById("n8").value);
+  let lines = [];
+  for (let i = 1; i <= 10; i++) lines.push(`${n} x ${i} = ${n * i}`);
+  setOutput("out-8", lines.join("\n"));
+}
+
+function runSumN() {
+  const n = Number(document.getElementById("n9").value);
+  let sum = 0;
+  for (let i = 1; i <= n; i++) sum += i;
+  setOutput("out-9", `Sum of first ${n} natural numbers = ${sum}`);
+}
+
+function runPrime() {
+  const n = Number(document.getElementById("n10").value);
+  let prime = n >= 2;
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) { prime = false; break; }
+  }
+  setOutput("out-10", `${n} is ${prime ? "a Prime number" : "not a Prime number"}`);
+}
+
+function runCountDigits() {
+  let n = Math.abs(Number(document.getElementById("n11").value));
+  let original = n;
+  let count = n === 0 ? 1 : 0;
+  while (n > 0) {
+    n = Math.floor(n / 10);
+    count++;
+  }
+  setOutput("out-11", `${original} has ${count} digit(s)`);
+}
+
+function runReverse() {
+  let n = Number(document.getElementById("n12").value);
+  const isNegative = n < 0;
+  n = Math.abs(n);
+  let reversed = 0;
+  while (n > 0) {
+    reversed = reversed * 10 + (n % 10);
+    n = Math.floor(n / 10);
+  }
+  if (isNegative) reversed = -reversed;
+  setOutput("out-12", `Reversed number: ${reversed}`);
+}
+
+function runSwitchCalc() {
+  const a = Number(document.getElementById("a13").value);
+  const op = document.getElementById("op13").value;
+  const b = Number(document.getElementById("b13").value);
+  let result;
+  switch (op) {
+    case "+": result = a + b; break;
+    case "-": result = a - b; break;
+    case "*": result = a * b; break;
+    case "/": result = b !== 0 ? a / b : "Cannot divide by zero"; break;
+    case "%": result = b !== 0 ? a % b : "Cannot divide by zero"; break;
+    default: result = "Invalid operator";
+  }
+  setOutput("out-13", `${a} ${op} ${b} = ${result}`);
+}
+
+function runGrade() {
+  const marks = ["s1", "s2", "s3", "s4", "s5"].map(id => Number(document.getElementById(id).value));
+  const total = marks.reduce((sum, m) => sum + m, 0);
+  const average = total / marks.length;
+  const percentage = (total / (marks.length * 100)) * 100;
+  let grade;
+  if (percentage >= 90) grade = "A+";
+  else if (percentage >= 80) grade = "A";
+  else if (percentage >= 70) grade = "B";
+  else if (percentage >= 60) grade = "C";
+  else if (percentage >= 40) grade = "D";
+  else grade = "F";
+  setOutput("out-14", `Total: ${total}\nAverage: ${average.toFixed(2)}\nPercentage: ${percentage.toFixed(2)}%\nGrade: ${grade}`);
+}
+
+function runChangeText() {
+  const newText = document.getElementById("text15").value;
+  document.getElementById("dom-target").textContent = newText;
+}
+
+function setBg(color) {
+  document.body.style.backgroundColor = color;
+}
+
+function runFormDisplay() {
+  const name = document.getElementById("name17").value;
+  const age = document.getElementById("age17").value;
+  const city = document.getElementById("city17").value;
+  setOutput("out-17", `Name: ${name}\nAge: ${age}\nCity: ${city}`);
+}
+
+let counterValue = 0;
+function counterChange(delta) {
+  counterValue += delta;
+  document.getElementById("counter-val").textContent = counterValue;
+}
+function counterReset() {
+  counterValue = 0;
+  document.getElementById("counter-val").textContent = counterValue;
+}
+
+function runRange() {
+  const start = Number(document.getElementById("start19").value);
+  const end = Number(document.getElementById("end19").value);
+  const even = [];
+  const odd = [];
+  for (let i = start; i <= end; i++) {
+    if (i % 2 === 0) even.push(i); else odd.push(i);
+  }
+  setOutput("out-19", `Even: ${even.join(", ") || "none"}\nOdd: ${odd.join(", ") || "none"}`);
+}
+
+function runMiniCalc() {
+  const a = Number(document.getElementById("a20").value);
+  const op = document.getElementById("op20").value;
+  const b = Number(document.getElementById("b20").value);
+  let result;
+  switch (op) {
+    case "+": result = a + b; break;
+    case "-": result = a - b; break;
+    case "*": result = a * b; break;
+    case "/": result = b !== 0 ? a / b : "Error: divide by zero"; break;
+    case "%": result = b !== 0 ? a % b : "Error: divide by zero"; break;
+    default: result = "Invalid operator";
+  }
+  setOutput("out-20", `${a} ${op} ${b} = ${result}`);
+}
+</script>
+</body>
+</html>
