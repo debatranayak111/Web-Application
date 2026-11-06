@@ -40,3 +40,4 @@ router.put('/profile', async (req, res) => {
 });
 
 export default router;
+

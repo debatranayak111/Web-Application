@@ -7,7 +7,7 @@
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB%20%26%20Mongoose-47A248?logo=mongodb&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deploy-Vercel%20Ready-000000?logo=vercel&logoColor=white)
 
-> **Live Deployment:** [https://internship-job-portal-debatra.vercel.app](https://internship-job-portal-debatra.vercel.app)  
+> **Live Deployment:** [https://web-application-bzet0g6hk-debatra.vercel.app/](https://web-application-bzet0g6hk-debatra.vercel.app/)  
 > **GitHub Repository:** [https://github.com/debatranayak111/Web-Application](https://github.com/debatranayak111/Web-Application)  
 > **Project Directory:** [https://github.com/debatranayak111/Web-Application/tree/main/internship-job-portal](https://github.com/debatranayak111/Web-Application/tree/main/internship-job-portal)  
 > **Author:** Debatra Nayak (`2024091239@gitam.edu`), GITAM Deemed to be University  
@@ -346,4 +346,5 @@ internship-job-portal/
 - **Course:** Web Application Development (WAD) Lab
 - **Assignment:** Capstone Full-Stack Web Application (HTML, CSS, JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB)
 - **Repository:** [https://github.com/debatranayak111/Web-Application](https://github.com/debatranayak111/Web-Application)
-- **Deployment URL:** [https://internship-job-portal-debatra.vercel.app](https://internship-job-portal-debatra.vercel.app)
+- **Deployment URL:** [https://web-application-bzet0g6hk-debatra.vercel.app/](https://web-application-bzet0g6hk-debatra.vercel.app/)
+

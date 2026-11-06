@@ -356,3 +356,4 @@ export const initialApplications = [
     updatedAt: new Date("2026-11-05T14:10:00Z").toISOString()
   }
 ];
+

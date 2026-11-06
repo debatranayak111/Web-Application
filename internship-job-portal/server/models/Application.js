@@ -70,3 +70,4 @@ const ApplicationSchema = new mongoose.Schema(
 ApplicationSchema.index({ jobId: 1, studentEmail: 1 }, { unique: true });
 
 export default mongoose.models.Application || mongoose.model('Application', ApplicationSchema);
+

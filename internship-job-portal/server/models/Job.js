@@ -99,3 +99,4 @@ const JobSchema = new mongoose.Schema(
 JobSchema.index({ title: 'text', company: 'text', skills: 'text' });
 
 export default mongoose.models.Job || mongoose.model('Job', JobSchema);
+

@@ -8,8 +8,9 @@
 A complete, responsive full-stack MERN application built with **HTML5, CSS3, JavaScript, ReactJS, NodeJS, ExpressJS, and MongoDB**, deployed on **Vercel**.
 
 📁 **Directory:** [`/internship-job-portal`](./internship-job-portal)  
-🌐 **Live Deployment:** [https://internship-job-portal-debatra.vercel.app](https://internship-job-portal-debatra.vercel.app)  
+🌐 **Live Deployment:** [https://web-application-bzet0g6hk-debatra.vercel.app/](https://web-application-bzet0g6hk-debatra.vercel.app)  
 📖 **Comprehensive Documentation:** [Read the Full README & API Specs](./internship-job-portal/README.md)  
+
 
 ### Key Capabilities:
 1. **🏢 Companies Post Job Opportunities:** Recruiter dashboard with rich posting modal (stipend, duration, openings, skills tags, perks, deadlines) and applicant reviewer.
